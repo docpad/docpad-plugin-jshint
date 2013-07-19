@@ -41,8 +41,8 @@
     "joe-reporter-console": "~1.2.1"
   },
   "license": "MIT",
-  "main": "./out/jshint.plugin.js",
+  "main": "./jshint.plugin.js",
   "scripts": {
-    "test": "node ./out/jshint.test.js"
+    "test": "node ./jshint.test.js"
   }
 }
