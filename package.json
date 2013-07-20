@@ -1,7 +1,7 @@
 {
   "name": "docpad-plugin-jshint",
   "version": "1.0.0",
-  "description": "A plugin for hinting your JS as it's generated",
+  "description": "JSHint plugin for docpad",
   "homepage": "https://github.com/jking90/docpad-plugin-jshint",
   "keywords": [
     "docpad",
