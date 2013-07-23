@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-jshint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSHint plugin for docpad",
   "homepage": "https://github.com/jking90/docpad-plugin-jshint",
   "keywords": [
@@ -32,7 +32,6 @@
     "docpad": ">=6.3 <7"
   },
   "dependencies": {
-    "taskgroup": "~3.1.1",
     "jshint": "~2.1.4",
     "colors": "~0.6.0-1"
   },

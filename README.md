@@ -10,11 +10,23 @@ npm install --save docpad-plugin-jshint
 ## Configure
 For information on customizing your plugin configuration you can refer to the [DocPad FAQ](https://github.com/bevry/docpad/wiki/FAQ)
 
+### Ignore Files 
+```
+ignoreFiles: ['path/file.js']
+```
+`ignoreFiles` accepts an array of file paths to ignore while hinting.
+
 ### Ignore Paths
 ```
 ignorePaths: ['path/']
 ```
 `ignorePaths` accepts an array of directory paths to ignore while hinting.
+
+### Ignore Minified Files
+```
+ignoreMinified: boolean
+```
+`ignoreMinified` accepts a boolean which determines whether files ending in `.min.js` are ignored. The default is `true`.
 
 ### Globals
 ```
@@ -24,7 +36,7 @@ globals: {var: boolean}
 
 
 ### JSHint options
-`hintOptions` is an object where you can pass any of [JSHint's options](http://www.jshint.com/docs/#options)
+`hintOptions` is an object where you can pass any of [JSHint's options](http://www.jshint.com/docs/options/)
 
 ## History
 [You can discover the history inside the `History.md` file](https://github.com/jking90/docpad-plugin-jshint/blob/master/History.md)
