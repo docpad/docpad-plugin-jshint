@@ -1,5 +1,8 @@
 ## History
 
+- v2.0.0 July 23, 2013
+  - Iterating version number for docpad@6.46 compatability
+
 - v1.0.2 July 23, 2013
   - Fixed deployment issue
 

@@ -18,12 +18,6 @@
 npm install; npm install -g coffee-script
 ```
 
-### Setup for development
-
-``` bash
-cake setup
-```
-
 ### Watch and compile
 
 ``` bash
