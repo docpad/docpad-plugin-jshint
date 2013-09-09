@@ -1,5 +1,8 @@
 ## History
 
+- v2.1.0 Sept 8, 2013
+  - Added support for `.jshintrc`
+
 - v2.0.0 July 23, 2013
   - Iterating version number for docpad@6.46 compatability
 

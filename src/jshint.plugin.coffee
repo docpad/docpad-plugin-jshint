@@ -3,6 +3,8 @@ module.exports = (BasePlugin) ->
   # Requires
   jshint = require('jshint').JSHINT
   colors = require('colors')
+  merge = require('merge')
+  fs = require('fs')
 
   # Define Plugin
   class JSHintPlugin extends BasePlugin
@@ -14,15 +16,25 @@ module.exports = (BasePlugin) ->
       ignorePaths: [ ]
       ignoreFiles: [ ]
       ignoreMinified: true
-      globals: { }       # additional predefined global variables
       hintOptions: { }
+
     
-      # Render After
-      # Called just just after we've rendered all the files.
+    # Render After
+    # Called just just after we've rendered all the files.
     renderAfter: ({collection}) ->
       if docpad.getEnvironment() is 'development'
         config = @config
         ignoredPaths = [ ]
+
+        # Read .jshintrc
+        fs.readFile process.cwd() + '/.jshintrc', (err, data) ->
+          if err
+            return 
+          else
+            jshintrc = JSON.parse(data)
+            merge(config.hintOptions, jshintrc)
+
+        # Set max errors
         if config.hintOptions.maxerr
           maxErrors = config.hintOptions.maxerr
         else
@@ -60,7 +72,7 @@ module.exports = (BasePlugin) ->
                 return
 
             # Skip valid files
-            if jshint(file.source, config.options, config.globals) is true
+            if jshint(file.source, config.hintOptions, config.globals) is true
               return
 
             else
