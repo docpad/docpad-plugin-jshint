@@ -18,14 +18,17 @@ module.exports = (BasePlugin) ->
       ignoreMinified: true
       hintOptions: { }
 
-    
-    # Read .jshintrc
-    fs.readFile process.cwd() + '/.jshintrc', (err, data) ->
-      if err
-        return 
-      else
-        jshintrc = JSON.parse(data)
-        merge(config.hintOptions, jshintrc)
+    docpadReady: () ->
+      # Read .jshintrc
+      fs.readFile process.cwd() + '/.jshintrc', (err, data) ->
+        if err
+          return 
+        else
+          config = @docpad.loadedPlugins.jshint.config
+          jshintrc = JSON.parse(data)
+          config.hintOptions = merge(config.hintOptions, jshintrc)
+          @docpad.loadedPlugins.jshint.config = config
+           
 
     # Render After
     # Called just just after we've rendered all the files.
