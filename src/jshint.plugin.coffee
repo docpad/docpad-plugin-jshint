@@ -24,10 +24,10 @@ module.exports = (BasePlugin) ->
         if err
           return 
         else
-          config = @docpad.loadedPlugins.jshint.getConfig('hintOptions')
+          config = @docpad.loadedPlugins.jshint.config
           jshintrc = JSON.parse(data)
           config.hintOptions = merge(config.hintOptions, jshintrc)
-          @docpad.loadedPlugins.jshint.setConfig(config)
+          @docpad.loadedPlugins.jshint.config = config
            
 
     # Render After
@@ -37,7 +37,6 @@ module.exports = (BasePlugin) ->
         config = @config
         ignoredPaths = [ ]
 
-        console.log config
         # Set max errors
         if config.hintOptions.maxerr
           maxErrors = config.hintOptions.maxerr

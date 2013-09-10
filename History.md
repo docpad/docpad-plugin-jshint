@@ -1,5 +1,8 @@
 ## History
 
+- v2.1.2 Sept 9, 2013
+  - Fixed bug that prevent this from working in docpad@<6.46
+
 - v2.1.1 Sept 9, 2013
   - Fixed bug that prevented `.jshintrc` from working after first generation
 
