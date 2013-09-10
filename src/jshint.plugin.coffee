@@ -19,20 +19,20 @@ module.exports = (BasePlugin) ->
       hintOptions: { }
 
     
+    # Read .jshintrc
+    fs.readFile process.cwd() + '/.jshintrc', (err, data) ->
+      if err
+        return 
+      else
+        jshintrc = JSON.parse(data)
+        merge(config.hintOptions, jshintrc)
+
     # Render After
     # Called just just after we've rendered all the files.
     renderAfter: ({collection}) ->
       if docpad.getEnvironment() is 'development'
         config = @config
         ignoredPaths = [ ]
-
-        # Read .jshintrc
-        fs.readFile process.cwd() + '/.jshintrc', (err, data) ->
-          if err
-            return 
-          else
-            jshintrc = JSON.parse(data)
-            merge(config.hintOptions, jshintrc)
 
         # Set max errors
         if config.hintOptions.maxerr
