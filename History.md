@@ -1,5 +1,8 @@
 ## History
 
+- v2.1.3 Sept 11, 2013
+  - Fixed a bug that prevented user from defining globals in `.jshintrc`
+
 - v2.1.2 Sept 9, 2013
   - Fixed bug that prevent this from working in docpad@<6.46
 

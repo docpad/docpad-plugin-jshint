@@ -34,9 +34,12 @@ globals: {var: boolean}
 ```
 `globals` is an object of global variables, with keys as names and a boolean value to determine if they are assignable.
 
+It's recommended you define these in a `.jshintrc` file instead of config options to make your preferences more portable.
 
 ### JSHint options
 `hintOptions` is an object where you can pass any of [JSHint's options](http://www.jshint.com/docs/options/)
+
+It's recommended you define these in a `.jshintrc` file instead of config options to make your preferences more portable.
 
 ## History
 [You can discover the history inside the `History.md` file](https://github.com/jking90/docpad-plugin-jshint/blob/master/History.md)
