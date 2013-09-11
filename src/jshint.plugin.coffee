@@ -16,6 +16,7 @@ module.exports = (BasePlugin) ->
       ignorePaths: [ ]
       ignoreFiles: [ ]
       ignoreMinified: true
+      globals: { }
       hintOptions: { }
 
     docpadReady: () ->
@@ -28,6 +29,10 @@ module.exports = (BasePlugin) ->
           jshintrc = JSON.parse(data)
           config.hintOptions = merge(config.hintOptions, jshintrc)
           @docpad.loadedPlugins.jshint.config = config
+
+          if config.hintOptions.globals
+            config.globals = merge(config.globals, config.hintOptions.globals)
+            delete config.hintOptions.globals
            
 
     # Render After
