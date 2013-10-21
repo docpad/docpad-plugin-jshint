@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-jshint",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "JSHint plugin for docpad",
   "homepage": "https://github.com/jking90/docpad-plugin-jshint",
   "keywords": [
