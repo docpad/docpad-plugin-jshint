@@ -38,7 +38,7 @@ module.exports = (BasePlugin) ->
     # Render After
     # Called just just after we've rendered all the files.
     renderAfter: ({collection}) ->
-      if docpad.getEnvironment() is 'development'
+      if @docpad.getEnvironment() is 'development'
         config = @config
         ignoredPaths = [ ]
 
