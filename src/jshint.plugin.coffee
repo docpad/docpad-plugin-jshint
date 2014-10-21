@@ -5,6 +5,7 @@ module.exports = (BasePlugin) ->
   colors = require('colors')
   merge = require('merge')
   fs = require('fs')
+  pathUtil = require('path')
 
   # Define Plugin
   class JSHintPlugin extends BasePlugin
@@ -56,6 +57,10 @@ module.exports = (BasePlugin) ->
           if path.charAt(path.length - 1) isnt '/'
             path = path + '/'
           ignoredPaths.push(path)
+
+        # this is necessary to work on windows
+        ignoredPaths = ignoredPaths.map(pathUtil.normalize)
+        config.ignoreFiles = config.ignoreFiles.map(pathUtil.normalize)
 
         collection.each (item) ->
           file = item.attributes
