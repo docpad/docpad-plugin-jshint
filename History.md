@@ -1,5 +1,13 @@
 ## History
 
+- v2.2.0 Oct 23, 2014
+  - Updated JSHint to 2.5.6
+  - Removed reference to global docpad (#4)
+  - Normalized ignored paths so they work on Windows (#5)
+
+- v2.1.4 Oct 21, 2013
+  - Updated JSHint to 2.3.0
+
 - v2.1.3 Sept 11, 2013
   - Fixed a bug that prevented user from defining globals in `.jshintrc`
 

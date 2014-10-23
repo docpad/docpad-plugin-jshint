@@ -1,6 +1,10 @@
 # [JSHint](http://www.jshint.com/) Plugin for [DocPad](https://docpad.org)
 
 [![NPM version](https://badge.fury.io/js/docpad-plugin-jshint.png)](https://npmjs.org/package/docpad-plugin-jshint "View this project on NPM")
+[![Dependency Status](https://gemnasium.com/jking90/docpad-plugin-jshint.png)](https://gemnasium.com/jking90/docpad-plugin-jshint)
+[![Build Status](https://travis-ci.org/jking90/docpad-plugin-jshint.png?branch=master)](https://travis-ci.org/jking90/docpad-plugin-jshint)
+[![Gittip donate button](http://img.shields.io/gittip/jking90.png)](https://www.gittip.com/jking90/ "Donate weekly to this project using Gittip")
+
 
 ## Install
 ```
