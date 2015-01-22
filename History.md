@@ -1,5 +1,8 @@
 ## History
 
+- v2.2.1 Jan 22, 2015
+  - Fixed bug when reading `.jshintrc` (#7)
+
 - v2.2.0 Oct 23, 2014
   - Updated JSHint to 2.5.6
   - Removed reference to global docpad (#4)
