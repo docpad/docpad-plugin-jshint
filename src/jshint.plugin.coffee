@@ -22,14 +22,15 @@ module.exports = (BasePlugin) ->
 
     docpadReady: () ->
       # Read .jshintrc
+      docpad = @docpad
       fs.readFile process.cwd() + '/.jshintrc', (err, data) ->
         if err
           return 
         else
-          config = @docpad.loadedPlugins.jshint.config
+          config = docpad.loadedPlugins.jshint.config
           jshintrc = JSON.parse(data)
           config.hintOptions = merge(config.hintOptions, jshintrc)
-          @docpad.loadedPlugins.jshint.config = config
+          docpad.loadedPlugins.jshint.config = config
 
           if config.hintOptions.globals
             config.globals = merge(config.globals, config.hintOptions.globals)
