@@ -68,7 +68,7 @@ module.exports = (BasePlugin) ->
           tooManyErrors = false
           
           # Find JS files
-          if file.extension is 'js'
+          if file.outExtension is 'js'
             
             # Skip files in ignored paths
             for path in ignoredPaths
@@ -86,7 +86,7 @@ module.exports = (BasePlugin) ->
                 return
 
             # Skip valid files
-            if jshint(file.source, config.hintOptions, config.globals) is true
+            if jshint(file.contentRendered, config.hintOptions, config.globals) is true
               return
 
             else
