@@ -1,3 +1,6 @@
+# Seeking new maintainer!
+> Open an issue if you'd like to take this project over.
+
 # [JSHint](http://www.jshint.com/) Plugin for [DocPad](https://docpad.org)
 
 [![NPM version](https://badge.fury.io/js/docpad-plugin-jshint.png)](https://npmjs.org/package/docpad-plugin-jshint "View this project on NPM")
