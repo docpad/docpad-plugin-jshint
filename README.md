@@ -79,6 +79,9 @@ It's recommended you define these in a `.jshintrc` file instead of config option
 
 
 
+
+
+
 <!-- INSTALL/ -->
 
 <h2>Install</h2>
