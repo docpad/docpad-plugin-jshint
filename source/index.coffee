@@ -3,7 +3,6 @@ module.exports = (BasePlugin) ->
 
 	# Requires
 	jshint = require('jshint').JSHINT
-	colors = require('colors')
 	merge = require('merge')
 	fs = require('fs')
 	pathUtil = require('path')
@@ -41,7 +40,8 @@ module.exports = (BasePlugin) ->
 		# Render After
 		# Called just just after we've rendered all the files.
 		renderAfter: ({collection}) ->
-			if @docpad.getEnvironment() is 'development'
+			docpad = @docpad
+			if docpad.getEnvironment() is 'development'
 				config = @config
 				ignoredPaths = [ ]
 
@@ -92,7 +92,7 @@ module.exports = (BasePlugin) ->
 
 						else
 							# Print filename
-							console.log 'JSHint - '.white + file.relativePath.red
+							message = "JSHint: #{file.fullPath}"
 
 							# Trim errors down to max to prevent failure
 							if jshint.errors.length > maxErrors
@@ -102,13 +102,11 @@ module.exports = (BasePlugin) ->
 
 							# Print errors
 							for err in jshint.errors
-								ref = 'line ' + err.line + ', char ' + err.character
-								message = err.reason
-								console.log ref.blue + ' - '.white + message
+								message += "\nline #{err.line}:#{err.character} - #{err.reason}"
 
 							# Print warning if jshint,errors was > maxerr
 							if tooManyErrors
-								console.log('Too many errors.'.underline.yellow)
+								messasge += '\nToo many errors...'
 
 							# Line break between each file
-							console.log '\n'
+							docpad.log('warn', message)

@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-jshint",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "JSHint plugin for docpad",
   "homepage": "https://github.com/docpad/docpad-plugin-jshint",
   "license": "MIT",
@@ -8,6 +8,7 @@
     "coffeescript",
     "docpad",
     "docpad-plugin",
+    "esnext",
     "javascript",
     "jshint",
     "jslint",
@@ -42,6 +43,7 @@
       "patreonUsername": "bevry",
       "paypalURL": "https://bevry.me/paypal",
       "wishlistURL": "https://bevry.me/wishlist",
+      "travisTLD": "com",
       "githubUsername": "docpad",
       "githubRepository": "docpad-plugin-jshint",
       "githubSlug": "docpad/docpad-plugin-jshint",
@@ -49,12 +51,16 @@
     }
   },
   "funding": "https://bevry.me/fund",
-  "author": "Jimmy King <hello@jimmyking.me> (http://jimmyking.me)",
+  "author": "Jimmy King <hello@jimmyking.me> (10x.la/croixdrinker)",
   "maintainers": [
-    "Jimmy King <hello@jimmyking.me> (https://github.com/jking90)"
+    "Jimmy King <hello@jimmyking.me> (https://github.com/10xLaCroixDrinker)"
   ],
   "contributors": [
-    "Jimmy King <hello@jimmyking.me> (https://github.com/jking90)"
+    "Benjamin Lupton (https://github.com/balupton)",
+    "Greenkeeper <support@greenkeeper.io> (https://github.com/greenkeeperio-bot)",
+    "Jimmy King <hello@jimmyking.me> (https://github.com/10xLaCroixDrinker)",
+    "Nathan Friedly (https://github.com/nfriedly)",
+    "Patrick Eriksson (https://github.com/paleite)"
   ],
   "bugs": {
     "url": "https://github.com/docpad/docpad-plugin-jshint/issues"
@@ -73,6 +79,7 @@
       "directory": "source",
       "entry": "index.coffee",
       "tags": [
+        "source",
         "coffeescript",
         "require"
       ],
@@ -83,32 +90,35 @@
       "directory": "edition-esnext",
       "entry": "index.js",
       "tags": [
+        "compiled",
         "javascript",
         "esnext",
         "require"
       ],
       "engines": {
-        "node": true
+        "node": "10 || 12 || 13 || 14"
       }
     }
   ],
   "type": "commonjs",
   "main": "edition-esnext/index.js",
   "dependencies": {
-    "colors": "~1.4.0",
     "docpad-baseplugin": "^1.4.0",
     "jshint": "~2.12.0",
     "merge": "~1.2.1"
   },
   "devDependencies": {
-    "@bevry/update-contributors": "^1.15.0",
+    "@bevry/update-contributors": "^1.17.0",
     "chai": "^4.2.0",
     "coffeelint": "^2.1.0",
     "coffeescript": "^2.5.1",
-    "docpad": "^6.83.1",
-    "docpad-plugintester": "^1.6.2",
-    "projectz": "^2.13.0",
-    "valid-directory": "^2.8.0"
+    "docpad": "^6.83.2",
+    "docpad-plugintester": "^1.7.3",
+    "projectz": "^2.16.0",
+    "valid-directory": "^3.4.0"
+  },
+  "peerDependencies": {
+    "docpad": "^6.83.2"
   },
   "scripts": {
     "our:clean": "rm -Rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",
@@ -124,7 +134,8 @@
     "our:release:prepare": "npm run our:clean && npm run our:compile && npm run our:test && npm run our:meta",
     "our:release:push": "git push origin master && git push origin --tags",
     "our:release:tag": "export MESSAGE=$(cat ./HISTORY.md | sed -n \"/## v$npm_package_version/,/##/p\" | sed 's/## //' | awk 'NR>1{print buf}{buf = $0}') && test \"$MESSAGE\" || (echo 'proper changelog entry not found' && exit -1) && git tag v$npm_package_version -am \"$MESSAGE\"",
-    "our:setup": "npm run our:setup:install",
+    "our:setup": "npm run our:setup:dpt && npm run our:setup:install",
+    "our:setup:dpt": "cd test && npm install && cd ..",
     "our:setup:install": "npm install",
     "our:test": "npm run our:verify && npm test",
     "our:verify": "npm run our:verify:coffeelint && npm run our:verify:directory",
