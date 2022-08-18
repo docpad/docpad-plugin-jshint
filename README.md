@@ -120,7 +120,7 @@ Install this DocPad plugin by entering <code>docpad install jshint</code> into y
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="10x.la/croixdrinker">Jimmy King</a> — <a href="https://github.com/docpad/docpad-plugin-jshint/commits?author=10xLaCroixDrinker" title="View the GitHub contributions of Jimmy King on repository docpad/docpad-plugin-jshint">view contributions</a></li></ul>
+<ul><li><a href="10x.la/croixdrinker">Jamie King</a> — <a href="https://github.com/docpad/docpad-plugin-jshint/commits?author=10xLaCroixDrinker" title="View the GitHub contributions of Jamie King on repository docpad/docpad-plugin-jshint">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
@@ -142,7 +142,7 @@ These amazing people have contributed code to this project:
 
 <ul><li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/docpad/docpad-plugin-jshint/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository docpad/docpad-plugin-jshint">view contributions</a></li>
 <li><a href="https://github.com/greenkeeperio-bot">Greenkeeper</a> — <a href="https://github.com/docpad/docpad-plugin-jshint/commits?author=greenkeeperio-bot" title="View the GitHub contributions of Greenkeeper on repository docpad/docpad-plugin-jshint">view contributions</a></li>
-<li><a href="10x.la/croixdrinker">Jimmy King</a> — <a href="https://github.com/docpad/docpad-plugin-jshint/commits?author=10xLaCroixDrinker" title="View the GitHub contributions of Jimmy King on repository docpad/docpad-plugin-jshint">view contributions</a></li>
+<li><a href="10x.la/croixdrinker">Jamie King</a> — <a href="https://github.com/docpad/docpad-plugin-jshint/commits?author=10xLaCroixDrinker" title="View the GitHub contributions of Jamie King on repository docpad/docpad-plugin-jshint">view contributions</a></li>
 <li><a href="https://github.com/nfriedly">Nathan Friedly</a> — <a href="https://github.com/docpad/docpad-plugin-jshint/commits?author=nfriedly" title="View the GitHub contributions of Nathan Friedly on repository docpad/docpad-plugin-jshint">view contributions</a></li>
 <li><a href="https://github.com/paleite">Patrick Eriksson</a> — <a href="https://github.com/docpad/docpad-plugin-jshint/commits?author=paleite" title="View the GitHub contributions of Patrick Eriksson on repository docpad/docpad-plugin-jshint">view contributions</a></li></ul>
 
@@ -157,7 +157,7 @@ These amazing people have contributed code to this project:
 
 Unless stated otherwise all works are:
 
-<ul><li>Copyright &copy; <a href="10x.la/croixdrinker">Jimmy King</a></li></ul>
+<ul><li>Copyright &copy; <a href="10x.la/croixdrinker">Jamie King</a></li></ul>
 
 and licensed under:
 
